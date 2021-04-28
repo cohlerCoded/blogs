@@ -7,8 +7,10 @@ import App from "./components/App";
 import reducers from "./reducers";
 
 ReactDOM.render(
-  <Provider store={createStore(reducers)}>
-    <App />
-  </Provider>,
+  <React.StrictMode>
+    <Provider store={createStore(reducers)}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
   document.getElementById("root")
 );
